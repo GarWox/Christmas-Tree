@@ -1,0 +1,241 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: skyblue;
+  animation: night 5s ease-in-out 1s infinite alternate;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* -------------------- Sky ---------------- */
+.sun {
+  position: absolute;
+  left: 1.875rem;
+  top: 1.875rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  background-color: yellow;
+  box-shadow: inset 0 0 5px 0 red, 1px -1px 10px 5px orange,
+    -1px 1px 10px 5px red, -1px 1px 10px 5px orange, 1px -1px 10px 5px red;
+  animation: moon 5s ease-in-out 1s infinite alternate;
+}
+
+@keyframes moon {
+  to {
+    background-color: white;
+  }
+  to {
+    box-shadow: inset 0 0 5px 0 blue, 1px -1px 10px 5px purple,
+      -1px 1px 10px 5px blue, -1px 1px 10px 5px purple, 1px -1px 10px 5px blue;
+  }
+}
+@keyframes night {
+  to {
+    background-color: black;
+  }
+}
+
+.cloud {
+  position: absolute;
+  right: 0.625rem;
+  top: 0.625rem;
+  animation: cloud 5s ease-in-out 1s infinite alternate;
+}
+
+@keyframes cloud {
+  to {
+    fill: #373737;
+  }
+}
+
+.starA {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid skyblue;
+  width: 0;
+  height: 0;
+  position: relative;
+}
+
+.starB {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid skyblue;
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -5px;
+}
+
+.starA,
+.starB {
+  animation: stars 5s ease-in-out 1s infinite alternate;
+}
+
+@keyframes stars {
+  to {
+    border-bottom-color: white;
+    border-top-color: white;
+  }
+}
+
+.star1,
+.star2,
+.star3,
+.star4,
+.star8,
+.star7,
+.star6,
+.star5,
+.star9,
+.star10,
+.star11,
+.star12 {
+  position: absolute;
+}
+
+.star1 {
+  left: 5px;
+}
+.star2 {
+  right: 5vw;
+}
+
+.star3 {
+  left: 50vw;
+  top: 20px;
+}
+
+.star4 {
+  left: 25vw;
+  top: 10px;
+}
+
+.star5 {
+  right: 25vw;
+  top: 5px;
+}
+
+.star6 {
+  top: 6.25rem;
+}
+
+.star7 {
+  top: 12.5rem;
+}
+
+.star8 {
+  top: 10rem;
+  left: 20vw;
+}
+
+.star9 {
+  right: 10px;
+  top: 9.375rem;
+}
+
+.star10 {
+  right: 20vw;
+  top: 11.25rem;
+}
+
+.star11 {
+  right: 38vw;
+  top: 8.125rem;
+}
+
+.star12 {
+  left: 40vw;
+  top: 5rem;
+}
+/* --------------------- Tree -----------------*/
+.C {
+  width: 100vw;
+}
+
+.treeStar {
+  top: 112px;
+  position: relative;
+  z-index: 100;
+  transform: scale(2.75, 2.75);
+}
+
+.starC {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid rgb(255, 255, 0);
+  filter: brightness(70%);
+  width: 0;
+  height: 0;
+  position: relative;
+}
+
+.starD {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid rgb(255, 255, 0);
+  filter: brightness(70%);
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -5px;
+}
+
+.starC,
+.starD {
+  animation: starOn 5s ease-in-out 1s infinite alternate;
+}
+
+@keyframes starOn {
+  to {
+    filter: brightness(100%);
+  }
+}
+.L1,
+.L2,
+.L3,
+.L4 {
+  width: 0;
+  height: 0;
+  position: relative;
+}
+
+.L1 {
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 120px solid green;
+  top: 100px;
+}
+
+.L2 {
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 140px solid green;
+  top: 30px;
+}
+
+.L3 {
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 140px solid green;
+  top: -40px;
+}
+
+.T1 {
+  width: 40px;
+  height: 130px;
+  position: relative;
+  background-color: #804000;
+  top: -40px;
+}
+
+.grass {
+  background-color: #268e00;
+  height: 20vh;
+  width: 100%;
+  top: -40px;
+  position: relative;
+}
